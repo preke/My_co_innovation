@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block title %} {{request.session.user_name}} {% endblock title %}
+{% block body %}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'base/css/userRoot.css'%}">
+<link rel="stylesheet" type="text/css" href="{% static 'base/css/searchUser.css'%}">
+<div class="user_search_container">
+    <div class="white_bg">
+      <div class="user_search_title">
+        <img src="{% static 'base/img/user_root/user_root_icon.png' %}">
+        <span>用户权限管理</span>
+      </div>
+      <div id="root" style="display: block">
+      <div class="user_info">
+        <div class="user_headimg">
+          <img src="{{user.head_image}}">
+        </div>
+        <div class="user_name_and_id">
+          <div>{{user.user_name}}</div>
+          <div>ID:{{user.id}}</div>
+        </div>
+      </div>
+      <form class="user_root_table" name="input" action="{% url 'edit_root_process' %}" method="post">
+        {% csrf_token %}
+        <ul>
+          <li>权限</li>
+          {% for root_name, root in root_list %}
+          <li>{{root_name}}</li>
+          {% endfor %}
+        </ul>
+        <ul class="img_yes_or_no">
+          <li>是否拥有该权限</li>
+          {% for root_name, root in roots_not_change %}
+            {% if root == 1 %}
+          <li><img src="{% static 'base/img/user_root/icon_of_yes.png' %}"></li>
+            {% endif %}
+            {% if root == 0 %}
+          <li><img src="{% static 'base/img/user_root/icon_of_no.png' %}"></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+        <ul class="last_ul">
+          <li>是否开通该权限</li>
+          {% for root_name, root, root2 in roots_edit %}
+              {% if root > 0 %}
+              <li>
+                <select class="select_gp" name="root_{{forloop.counter}}">
+                  {% if root2 == 0 %}
+                  <option value="0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关闭</option>
+                  <option value="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;开通</option>
+                  {% endif %}
+                  {% if root2 == 1 %}
+                  <option value="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;开通</option>
+                  <option value="0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关闭</option>
+                  {% endif %}
+                </select>
+              </li>
+              {% endif %}
+              {% if root == 0 %}
+                  {% if root2 == 0 %}
+                      <li >
+                        <input type="hidden" name="root_{{forloop.counter}}" value="0" />
+                        <img src="{% static 'base/img/user_root/icon_of_no.png' %}">
+                      </li>
+                  {% endif %}
+                  {% if root2 == 1 %}
+                      <li >
+                        <input type="hidden" name="root_{{forloop.counter}}" value="1" />
+                        <img src="{% static 'base/img/user_root/icon_of_no.png' %}">
+                      </li>
+                  {% endif %}
+              {% endif %}
+          {% endfor %}
+        </ul>
+        <input type="hidden" name="roots_not_change_all" value={{roots_not_change_all}} />
+        <input type="hidden" name="user_name" value="{{user.user_name}}" />
+          <input type="submit" class="user_root_save_button" value="保存">
+      </form>
+
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock body %}

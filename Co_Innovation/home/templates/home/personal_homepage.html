@@ -1,0 +1,292 @@
+ <!DOCTYPE html>
+{% extends 'base.html' %}
+{% block title %} {{user.user_name}}主页 {% endblock title %}
+
+
+{% block body %}
+
+<div class="mainbox row">
+  <div id="_list1" class="col-xs-3 col-md-3 col-lg-3">
+    <ul>
+      <li><a class="item_inf" href="#" >个人信息</a></li>
+      <li><a id="current" class="item_pro" href="#">我的项目</a></li>
+      <li><a class="item_collection" href="#">个人收藏</a></li>
+    </ul>
+  </div>
+  <div id="_list2" class="col-xs-1 col-md-1 col-lg-1">
+    <ul>
+      <li id="not_done"><a href="##">未完成</a></li>
+      <li id="done"><a href="##">已完成</a></li>
+    </ul>
+  </div>
+  <div id="my_project">
+				<!-- 未完成 -->
+				<div id="rightbox1" class="col-xs-8 col-md-8 col-lg-8">
+					<!--项目 以row为单位添加一个项目栏-->
+					<div class="row">
+						<div class="_list3 NotDone col-xs-10 col-md-10 col-lg-10">
+							<div class="row"><img src="img/picture/circle.png"><h3>JAVA分布式架构<span>未编辑展示文本</span></h3></div>
+							<div class="row item_content"><p>使用Maven对项目进行模块化管理，提高项目的易开发性、扩展性。<br/>使用Maven对项目进行模块化管理，提高项目的易开发性、扩展性。<br/>系统包括两个模块：系统管理模块、调度管理模块、Web展示模块。使用Maven对项目进行模块化管理，提高项目的易开发性、扩展性。<br/>系统包括两个模块：系统管理模块、调度管理模块、Web展示模块。使用Maven对项目进行模块化管理，提高项目的易开发性、扩展性。<br/>系统包括两个模块：系统管理模块、调度管理模块、Web展示模块。使用Maven对项目进行模块化管理，提高项目的易开发性、扩展性。<br/>系统包括两个模块：系统管理模块、调度管理模块、Web展示模块。使用Maven对项目进行模块化管理，提高项目的易开发性、扩展性。<br/>系统包括两个模块：系统管理模块、调度管理模块、Web展示模块。系统包括两个模块：系统管理模块、调度管理模块、Web展示模块。</p></div>
+							<div class="row"><p class="time">开始时间</p><p class="time_num">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2016.8.10</p></div>
+							<div class="row"><p class="time">结束时间</p><p class="time_num">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2016.8.26</p></div>
+							<div class="row member">
+								<div class="col-sm-1 col-md-1 col-lg-1"><p>我的伙伴</p></div>
+								<div class="col-sm-11 col-md-11 col-lg-11">
+									<!--项目成员列表 以member_list为单位添加一行新成员-->
+									<div class="row member_list">
+										<div class="col-sm-3 col-md-3 col-lg-3 leader"><img src="img/picture/p1.png"/><p>卖女孩的小蘑菇</p><p>项目负责人</p></div>
+										<div class="col-sm-3 col-md-3 col-lg-3 staff"><img src="img/picture/p1.png"/><p>小魔仙</p><p>前端工程师</p></div>
+										<div class="col-sm-3 col-md-3 col-lg-3 staff"><img src="img/picture/p1.png"/><p>玛丽苏</p><p>前端工程师</p></div>
+										<div class="col-sm-3 col-md-3 col-lg-3 staff"><img src="img/picture/p1.png"/><p>肥猪流</p><p>前端工程师</p></div>
+									</div>
+								</div>
+							</div>
+							<div class="money">
+								<p class="num">35%</p>
+								<p>我所获得金币数占</p>
+								<img class="_box" src="img/picture/box.png"/></div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="_list3 NotDone col-xs-10 col-md-10 col-lg-10">
+							<div class="row"><img src="img/picture/circle.png"><h3>JAVA分布式架构<span>未编辑展示文本</span></h3></div>
+							<div class="row item_content"><p>使用Maven对项目进行模块化管理，提高项目的易开发性、扩展性。<br/>使用Maven对项目进行模块化管理，提高项目的易开发性、扩展性。<br/>系统包括两个模块：系统管理模块、调度管理模块、Web展示模块。使用Maven对项目进行模块化管理，提高项目的易开发性、扩展性。<br/>系统包括两个模块：系统管理模块、调度管理模块、Web展示模块。使用Maven对项目进行模块化管理，提高项目的易开发性、扩展性。<br/>系统包括两个模块：系统管理模块、调度管理模块、Web展示模块。使用Maven对项目进行模块化管理，提高项目的易开发性、扩展性。<br/>系统包括两个模块：系统管理模块、调度管理模块、Web展示模块。使用Maven对项目进行模块化管理，提高项目的易开发性、扩展性。<br/>系统包括两个模块：系统管理模块、调度管理模块、Web展示模块。系统包括两个模块：系统管理模块、调度管理模块、Web展示模块。</p></div>
+							<div class="row"><p class="time">开始时间</p><p class="time_num">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2016.8.10</p></div>
+							<div class="row"><p class="time">结束时间</p><p class="time_num">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2016.8.26</p></div>
+							<div class="row member">
+								<div class="col-sm-1 col-md-1 col-lg-1"><p>我的伙伴</p></div>
+								<div class="col-sm-11 col-md-11 col-lg-11">
+									<!--项目成员列表 以member_list为单位添加一行新成员-->
+									<div class="row member_list">
+										<div class="col-sm-3 col-md-3 col-lg-3 leader"><img src="img/picture/p1.png"/><p>卖女孩的小蘑菇</p><p>项目负责人</p></div>
+										<div class="col-sm-3 col-md-3 col-lg-3 staff"><img src="img/picture/p1.png"/><p>小魔仙</p><p>前端工程师</p></div>
+										<div class="col-sm-3 col-md-3 col-lg-3 staff"><img src="img/picture/p1.png"/><p>玛丽苏</p><p>前端工程师</p></div>
+										<div class="col-sm-3 col-md-3 col-lg-3 staff"><img src="img/picture/p1.png"/><p>肥猪流</p><p>前端工程师</p></div>
+									</div>
+								</div>
+							</div>
+							<div class="money">
+								<p class="num">35%</p>
+								<p>我所获得金币数占</p>
+								<img class="_box" src="img/picture/box.png"/></div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="_list3 NotDone col-xs-10 col-md-10 col-lg-10">
+							<div class="row"><img src="img/picture/circle.png"><h3>JAVA分布式架构<span>未编辑展示文本</span></h3></div>
+							<div class="row item_content"><p>使用Maven对项目进行模块化管理，提高项目的易开发性、扩展性。<br/>使用Maven对项目进行模块化管理，提高项目的易开发性、扩展性。<br/>系统包括两个模块：系统管理模块、调度管理模块、Web展示模块。使用Maven对项目进行模块化管理，提高项目的易开发性、扩展性。<br/>系统包括两个模块：系统管理模块、调度管理模块、Web展示模块。使用Maven对项目进行模块化管理，提高项目的易开发性、扩展性。<br/>系统包括两个模块：系统管理模块、调度管理模块、Web展示模块。使用Maven对项目进行模块化管理，提高项目的易开发性、扩展性。<br/>系统包括两个模块：系统管理模块、调度管理模块、Web展示模块。使用Maven对项目进行模块化管理，提高项目的易开发性、扩展性。<br/>系统包括两个模块：系统管理模块、调度管理模块、Web展示模块。系统包括两个模块：系统管理模块、调度管理模块、Web展示模块。</p></div>
+							<div class="row"><p class="time">开始时间</p><p class="time_num">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2016.8.10</p></div>
+							<div class="row"><p class="time">结束时间</p><p class="time_num">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2016.8.26</p></div>
+							<div class="row member">
+								<div class="col-sm-1 col-md-1 col-lg-1"><p>我的伙伴</p></div>
+								<div class="col-sm-11 col-md-11 col-lg-11">
+									<!--项目成员列表 以member_list为单位添加一行新成员-->
+									<div class="row member_list">
+										<div class="col-sm-3 col-md-3 col-lg-3 leader"><img src="img/picture/p1.png"/><p>卖女孩的小蘑菇</p><p>项目负责人</p></div>
+										<div class="col-sm-3 col-md-3 col-lg-3 staff"><img src="img/picture/p1.png"/><p>小魔仙</p><p>前端工程师</p></div>
+										<div class="col-sm-3 col-md-3 col-lg-3 staff"><img src="img/picture/p1.png"/><p>玛丽苏</p><p>前端工程师</p></div>
+										<div class="col-sm-3 col-md-3 col-lg-3 staff"><img src="img/picture/p1.png"/><p>肥猪流</p><p>前端工程师</p></div>
+									</div>
+								</div>
+							</div>
+							<div class="money">
+								<p class="num">35%</p>
+								<p>我所获得金币数占</p>
+								<img class="_box" src="img/picture/box.png"/>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="_list3 NotDone col-xs-10 col-md-10 col-lg-10">
+							<div class="row"><img src="img/picture/circle.png"><h3>JAVA分布式架构<span>未编辑展示文本</span></h3></div>
+							<div class="row item_content"><p>使用Maven对项目进行模块化管理，提高项目的易开发性、扩展性。<br/>使用Maven对项目进行模块化管理，提高项目的易开发性、扩展性。<br/>系统包括两个模块：系统管理模块、调度管理模块、Web展示模块。使用Maven对项目进行模块化管理，提高项目的易开发性、扩展性。<br/>系统包括两个模块：系统管理模块、调度管理模块、Web展示模块。使用Maven对项目进行模块化管理，提高项目的易开发性、扩展性。<br/>系统包括两个模块：系统管理模块、调度管理模块、Web展示模块。使用Maven对项目进行模块化管理，提高项目的易开发性、扩展性。<br/>系统包括两个模块：系统管理模块、调度管理模块、Web展示模块。使用Maven对项目进行模块化管理，提高项目的易开发性、扩展性。<br/>系统包括两个模块：系统管理模块、调度管理模块、Web展示模块。系统包括两个模块：系统管理模块、调度管理模块、Web展示模块。</p></div>
+							<div class="row"><p class="time">开始时间</p><p class="time_num">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2016.8.10</p></div>
+							<div class="row"><p class="time">结束时间</p><p class="time_num">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2016.8.26</p></div>
+							<div class="row member">
+								<div class="col-sm-1 col-md-1 col-lg-1"><p>我的伙伴</p></div>
+								<div class="col-sm-11 col-md-11 col-lg-11">
+									<!--项目成员列表 以member_list为单位添加一行新成员-->
+									<div class="row member_list">
+										<div class="col-sm-3 col-md-3 col-lg-3 leader"><img src="img/picture/p1.png"/><p>卖女孩的小蘑菇</p><p>项目负责人</p></div>
+										<div class="col-sm-3 col-md-3 col-lg-3 staff"><img src="img/picture/p1.png"/><p>小魔仙</p><p>前端工程师</p></div>
+										<div class="col-sm-3 col-md-3 col-lg-3 staff"><img src="img/picture/p1.png"/><p>玛丽苏</p><p>前端工程师</p></div>
+										<div class="col-sm-3 col-md-3 col-lg-3 staff"><img src="img/picture/p1.png"/><p>肥猪流</p><p>前端工程师</p></div>
+									</div>
+								</div>
+							</div>
+							<div class="money">
+								<p class="num">35%</p>
+								<p>我所获得金币数占</p>
+								<img class="_box" src="img/picture/box.png"/></div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="_list3 NotDone col-xs-10 col-md-10 col-lg-10">
+							<div class="row"><img src="img/picture/circle.png"><h3>JAVA分布式架构<span>未编辑展示文本</span></h3></div>
+							<div class="row item_content"><p>使用Maven对项目进行模块化管理，提高项目的易开发性、扩展性。<br/>使用Maven对项目进行模块化管理，提高项目的易开发性、扩展性。<br/>系统包括两个模块：系统管理模块、调度管理模块、Web展示模块。使用Maven对项目进行模块化管理，提高项目的易开发性、扩展性。<br/>系统包括两个模块：系统管理模块、调度管理模块、Web展示模块。使用Maven对项目进行模块化管理，提高项目的易开发性、扩展性。<br/>系统包括两个模块：系统管理模块、调度管理模块、Web展示模块。使用Maven对项目进行模块化管理，提高项目的易开发性、扩展性。<br/>系统包括两个模块：系统管理模块、调度管理模块、Web展示模块。使用Maven对项目进行模块化管理，提高项目的易开发性、扩展性。<br/>系统包括两个模块：系统管理模块、调度管理模块、Web展示模块。系统包括两个模块：系统管理模块、调度管理模块、Web展示模块。</p></div>
+							<div class="row"><p class="time">开始时间</p><p class="time_num">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2016.8.10</p></div>
+							<div class="row"><p class="time">结束时间</p><p class="time_num">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2016.8.26</p></div>
+							<div class="row member">
+								<div class="col-sm-1 col-md-1 col-lg-1"><p>我的伙伴</p></div>
+								<div class="col-sm-11 col-md-11 col-lg-11">
+									<!--项目成员列表 以member_list为单位添加一行新成员-->
+									<div class="row member_list">
+										<div class="col-sm-3 col-md-3 col-lg-3 leader"><img src="img/picture/p1.png"/><p>卖女孩的小蘑菇</p><p>项目负责人</p></div>
+										<div class="col-sm-3 col-md-3 col-lg-3 staff"><img src="img/picture/p1.png"/><p>小魔仙</p><p>前端工程师</p></div>
+										<div class="col-sm-3 col-md-3 col-lg-3 staff"><img src="img/picture/p1.png"/><p>玛丽苏</p><p>前端工程师</p></div>
+										<div class="col-sm-3 col-md-3 col-lg-3 staff"><img src="img/picture/p1.png"/><p>肥猪流</p><p>前端工程师</p></div>
+									</div>
+								</div>
+							</div>
+							<div class="money">
+								<p class="num">35%</p>
+								<p>我所获得金币数占</p>
+								<img class="_box" src="img/picture/box.png"/></div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="_list3 NotDone col-xs-10 col-md-10 col-lg-10">
+							<div class="row"><img src="img/picture/circle.png"><h3>JAVA分布式架构<span>未编辑展示文本</span></h3></div>
+							<div class="row item_content"><p>使用Maven对项目进行模块化管理，提高项目的易开发性、扩展性。<br/>使用Maven对项目进行模块化管理，提高项目的易开发性、扩展性。<br/>系统包括两个模块：系统管理模块、调度管理模块、Web展示模块。使用Maven对项目进行模块化管理，提高项目的易开发性、扩展性。<br/>系统包括两个模块：系统管理模块、调度管理模块、Web展示模块。使用Maven对项目进行模块化管理，提高项目的易开发性、扩展性。<br/>系统包括两个模块：系统管理模块、调度管理模块、Web展示模块。使用Maven对项目进行模块化管理，提高项目的易开发性、扩展性。<br/>系统包括两个模块：系统管理模块、调度管理模块、Web展示模块。使用Maven对项目进行模块化管理，提高项目的易开发性、扩展性。<br/>系统包括两个模块：系统管理模块、调度管理模块、Web展示模块。系统包括两个模块：系统管理模块、调度管理模块、Web展示模块。</p></div>
+							<div class="row"><p class="time">开始时间</p><p class="time_num">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2016.8.10</p></div>
+							<div class="row"><p class="time">结束时间</p><p class="time_num">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2016.8.26</p></div>
+							<div class="row member">
+								<div class="col-sm-1 col-md-1 col-lg-1"><p>我的伙伴</p></div>
+								<div class="col-sm-11 col-md-11 col-lg-11">
+									<!--项目成员列表 以member_list为单位添加一行新成员-->
+									<div class="row member_list">
+										<div class="col-sm-3 col-md-3 col-lg-3 leader"><img src="img/picture/p1.png"/><p>卖女孩的小蘑菇</p><p>项目负责人</p></div>
+										<div class="col-sm-3 col-md-3 col-lg-3 staff"><img src="img/picture/p1.png"/><p>小魔仙</p><p>前端工程师</p></div>
+										<div class="col-sm-3 col-md-3 col-lg-3 staff"><img src="img/picture/p1.png"/><p>玛丽苏</p><p>前端工程师</p></div>
+										<div class="col-sm-3 col-md-3 col-lg-3 staff"><img src="img/picture/p1.png"/><p>肥猪流</p><p>前端工程师</p></div>
+									</div>
+								</div>
+							</div>
+							<div class="money">
+								<p class="num">35%</p>
+								<p>我所获得金币数占</p>
+								<img class="_box" src="img/picture/box.png"/></div>
+						</div>
+					</div>
+					<!--页码-->
+					<div class="row _list4">
+						<!--<div class="_list4 col-xs-10 col-md-10 col-lg-10">-->
+						<ul class="Pagination_">
+							<li><a href="#" alt="1">&lt;</a></li>
+							<li><a href="#" alt="2">1</a></li>
+							<li><a href="#" alt="3">2</a></li>
+							<li><a href="#" alt="4">3</a></li>
+							<li><a href="#" alt="5">4</a></li>
+							<li><a href="#" alt="6">5</a></li>
+							<li><a href="#" alt="6">6</a></li>
+							<li><a href="#" alt="7">&gt;</a></li>
+						</ul>
+						<!--</div>-->
+					</div>
+				</div>
+				<!-- 已完成 -->
+				<div id="rightbox2" class="col-xs-8 col-md-8 col-lg-8">
+					<!--项目 以row为单位添加一个项目栏 NotDone表示未编辑展示文本  Done表示已编辑-->
+					<div class="row">
+						<div class="_list3 NotDone col-xs-10 col-md-10 col-lg-10">
+							<div class="row"><img src="img/picture/circle.png"><h3>JAVA分布式架构<span>未编辑展示文本</span></h3></div>
+							<div class="row item_content"><p>使用Maven对项目进行模块化管理，提高项目的易开发性、扩展性。<br/>系统包括两个模块：系统管理模块、调度管理模块、Web展示模块。</p></div>
+							<div class="row"><p class="time">开始时间</p><p class="time_num">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2016.8.10</p></div>
+							<div class="row"><p class="time">结束时间</p><p class="time_num">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2016.8.26</p></div>
+							<div class="row member">
+								<div class="col-sm-1 col-md-1 col-lg-1"><p>我的伙伴</p></div>
+								<div class="col-sm-11 col-md-11 col-lg-11">
+									<div class="row member_list">
+										<div class="col-sm-3 col-md-3 col-lg-3 leader"><img src="img/picture/p1.png"/><p>卖女孩的小蘑菇</p><p>项目负责人</p></div>
+										<div class="col-sm-3 col-md-3 col-lg-3 staff"><img src="img/picture/p1.png"/><p>小魔仙</p><p>前端工程师</p></div>
+										<div class="col-sm-3 col-md-3 col-lg-3 staff"><img src="img/picture/p1.png"/><p>玛丽苏</p><p>前端工程师</p></div>
+										<div class="col-sm-3 col-md-3 col-lg-3 staff"><img src="img/picture/p1.png"/><p>肥猪流</p><p>前端工程师</p></div>
+									</div>
+								</div>
+							</div>
+							<div class="money">
+								<p class="num">35%</p>
+								<p>我所获得金币数占</p>
+								<img class="_box" src="img/picture/box.png"/></div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="_list3 Done col-xs-10 col-md-10 col-lg-10">
+							<div class="row"><img src="img/picture/circle.png"><h3>JAVA分布式架构<span>未编辑展示文本</span></h3></div>
+							<div class="row item_content"><p>使用Maven对项目进行模块化管理，提高项目的易开发性、扩展性。<br/>系统包括两个模块：系统管理模块、调度管理模块、Web展示模块。</p></div>
+							<div class="row"><p class="time">开始时间</p><p class="time_num">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2016.8.10</p></div>
+							<div class="row"><p class="time">结束时间</p><p class="time_num">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2016.8.26</p></div>
+							<div class="row member">
+								<div class="col-sm-1 col-md-1 col-lg-1"><p>我的伙伴</p></div>
+								<div class="col-sm-11 col-md-11 col-lg-11">
+									<div class="row member_list">
+										<div class="col-sm-3 col-md-3 col-lg-3 leader"><img src="img/picture/p1.png"/><p>卖女孩的小蘑菇</p><p>项目负责人</p></div>
+										<div class="col-sm-3 col-md-3 col-lg-3 staff"><img src="img/picture/p1.png"/><p>小魔仙</p><p>前端工程师</p></div>
+										<div class="col-sm-3 col-md-3 col-lg-3 staff"><img src="img/picture/p1.png"/><p>玛丽苏</p><p>前端工程师</p></div>
+										<div class="col-sm-3 col-md-3 col-lg-3 staff"><img src="img/picture/p1.png"/><p>肥猪流</p><p>前端工程师</p></div>
+									</div>
+									<div class="row member_list">
+										<div class="col-sm-3 col-md-3 col-lg-3 leader"><img src="img/picture/p1.png"/><p>卖女孩的小蘑菇</p><p>项目负责人</p></div>
+										<div class="col-sm-3 col-md-3 col-lg-3 staff"><img src="img/picture/p1.png"/><p>小魔仙</p><p>前端工程师</p></div>
+										<div class="col-sm-3 col-md-3 col-lg-3 staff"><img src="img/picture/p1.png"/><p>玛丽苏</p><p>前端工程师</p></div>
+										<div class="col-sm-3 col-md-3 col-lg-3 staff"><img src="img/picture/p1.png"/><p>肥猪流</p><p>前端工程师</p></div>
+									</div>
+									<div class="row member_list">
+										<div class="col-sm-3 col-md-3 col-lg-3 leader"><img src="img/picture/p1.png"/><p>卖女孩的小蘑菇</p><p>项目负责人</p></div>
+										<div class="col-sm-3 col-md-3 col-lg-3 staff"><img src="img/picture/p1.png"/><p>小魔仙</p><p>前端工程师</p></div>
+										<div class="col-sm-3 col-md-3 col-lg-3 staff"><img src="img/picture/p1.png"/><p>玛丽苏</p><p>前端工程师</p></div>
+										<div class="col-sm-3 col-md-3 col-lg-3 staff"><img src="img/picture/p1.png"/><p>肥猪流</p><p>前端工程师</p></div>
+									</div>
+								</div>
+							</div>
+							<div class="money">
+								<p class="num">35%</p>
+								<p>我所获得金币数占</p>
+								<img class="_box" src="img/picture/box.png"/></div>
+						</div>
+					</div>
+					<!--页码-->
+					<div class="row _list4">
+						<ul class="Pagination_">
+							<li><a href="#" alt="1">&lt;</a></li>
+							<li><a href="#" alt="2">1</a></li>
+							<li><a href="#" alt="3">2</a></li>
+							<li><a href="#" alt="4">3</a></li>
+							<li><a href="#" alt="5">4</a></li>
+							<li><a href="#" alt="6">5</a></li>
+							<li><a href="#" alt="6">6</a></li>
+							<li><a href="#" alt="7">&gt;</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+  <div id="my_inf">
+				<div>
+				    <form method="post" action="#">
+				    	<fieldset>
+				    		<legend>个人信息</legend>
+            				<p><span style="margin-right:30px;">账&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号:</span>13350016</p>
+					        <p id="user1"><span style="margin-right:30px;">昵&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称:</span>wangxg6</p>
+					        <p id="user2" style="display: none"><span style="margin-right:30px;">昵&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称:</span><input id="inputname" type="text" width="200px"  name="username"  onfocusout="userjudge0()"><br/><span ref="1"  style="color: red;" id="judge0">＊请输入3位以上的昵称</span></p>
+					        <p style="display: none" id="pas1"><span style="margin-right:30px;">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码:</span><input type="password" id="pass1" width="200px" name="pass1" onfocusout="pasjudge1()"><br/><span  ref="1" style="color: red;" id="judge1">＊请输入6位以上的密码</span></p>
+					        <p style="display: none" id="pas2"><span style="margin-right:30px;">确认密码:</span><input type="password" width="200px" id="pass2" name="pass2" onfocusout="pasjudge2()"><br/><span ref="1" style="color: red;display: none" id="judge2" >＊两次密码输入不符合</span></p>
+					        <p><span style="margin-right:30px;">邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱:</span>1234535453@qq.com"</p>
+					        <p><span style="margin-right:30px;">专&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业:</span>数据院</p>
+					        <p id="changebuttom1"><input type="button" style="width: 100px;height: 30px;color: green;" value="更改信息" onclick="prompt_judge()"/></p>
+					        <p id="changebuttom2" style="display: none"><input type="submit" style="width: 100px;height: 10px;color: green;" value="确定"/></p>
+        				</fieldset>
+				    </form>
+				</div>
+  </div>
+  <div id="my_collection">
+				<h1>我的收藏夹</h1>
+				<ul>
+					<li>我的小博呗</li>
+					<li>兰寿想哭</li>
+					<li>屋里瓦卡嘻嘻</li>
+					<li>我的列表2</li>
+				</ul>
+  </div>
+</div>
+
+{% endblock %}

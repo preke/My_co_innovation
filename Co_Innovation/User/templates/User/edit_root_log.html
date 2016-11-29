@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block title %} {{request.session.user_name}} {% endblock title %}
+{% block body %}
+{% load staticfiles %}
+<script type="text/javascript">
+  (function($){
+    $(window).on("load",function(){
+        $("#user_name").blur(function(){
+          var uname = $("#user_name").val();
+          $.get("{% url 'find_user' %}",{'user_name':uname}, function(ret){
+            $('#hint').html(ret);
+          })
+        });
+    });
+  })(jQuery);
+
+</script>
+
+<link rel="stylesheet" type="text/css" href="{% static 'base/css/searchUser.css'%}">
+<div class="user_search_container">
+  <div class="white_bg">
+    <div class="user_search_title">
+      <img src="{% static 'base/img/user_root/user_root_icon.png' %}">
+      <span>用户权限管理</span>
+    </div>
+    <form action = "{% url 'edit_root' %}" method="post">
+      {% csrf_token %}
+    <div class="user_search_content">
+      <span>用户ID</span>
+      <div class="user_search_input_box">
+        <input name="user_name" id="user_name" class="user_search_input" type="text">
+        <div id="hint" class="user_not_exist_text"></div>
+      </div>
+      <input type="submit" class="serach_user_button" value="查找用户" style = "background:white"/>
+    </div>
+    </form>
+  </div>
+</div>
+{% endblock body %}
